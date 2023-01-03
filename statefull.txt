@@ -1,0 +1,23 @@
+1-Our Kafka cluster contains three topics:
+• The score-events topic contains game scores. The records are unkeyed and
+are therefore distributed in a round-robin fashion across the topic’s
+partitions.
+• The players topic contains player profiles. Each record is keyed by a player
+ID.
+• The products topic contains product information for various video games.
+Each record is keyed by a product ID.
+2-We need to enrich our score events data with detailed player information. We can
+accomplish this using a join.
+3-Once we’ve enriched the score-events data with player data, we need to add
+detailed product information to the resulting stream. This can also be accomplished
+using a join.
+4-Since grouping data is a prerequisite for aggregating, we need to group the
+enriched stream.
+
+5-We need to calculate the top three high scores for each game. We can use Kafka
+Streams’ aggregation operators for this purpose.
+
+6-Finally, we need to expose the high scores for each game externally. We will
+accomplish this by building a RESTful microservice using the interactive queries
+feature in Kafka Streams.
+

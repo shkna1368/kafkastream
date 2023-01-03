@@ -1,0 +1,34 @@
+The two APIs you can choose from are:
+• The high-level DSL
+• The low-level Processor API
+
+• The high-level DSL
+• The low-level Processor API
+
+Stateless Versus Stateful Processing
+One of the most important things you should consider when building a Kafka
+Streams application is whether or not your application requires stateful processing.
+The following describes the distinction between stateless and stateful stream
+processing:
+• In stateless applications, each event handled by your Kafka Streams application is
+processed independently of other events, and only stream views are needed by
+your application (see “Streams and Tables” on page 53). In other words, your
+application treats each event as a self-contained insert and requires no memory
+of previously seen events.
+• Stateful applications, on the other hand, need to remember information about
+previously seen events in one or more steps of your processor topology, usually for
+the purpose of aggregating, windowing, or joining event streams. These applications
+are more complex under the hood since they need to track additional data,
+or state.
+
+
+Operators are
+stream processing functions (e.g., filter, map, flatMap, join, etc.) that are applied to
+events as they flow through your topology.
+
+Stateless operator:filter, map, flatMap, join,merge,flatmap,branch
+
+
+Stateful Operators:Joining data-Group-Aggregating data-Windowing data
+
+

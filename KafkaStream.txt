@@ -1,0 +1,11 @@
+Kafka Streams provides an API for message streaming that incorporates a framework for processing, enriching, and transforming messages. 
+The Kafka Streams API is a client-side library that sits alongside the existing APIs, namely the Consumer, Producer, and Connect APIs. 
+The Kafka Connect API is used for connecting to external datastores such as databases to read or write data to topics.
+Some real-life examples of streaming data could be sensor data, stock market event streams, and system logs.
+Kafka Streams provides a duality between Kafka topics and relational database tables.
+It enables us to do operations like joins, grouping, aggregation, and filtering of one or more streaming events.
+An important concept of Kafka Streams is that of processor topology. Processor topology is the blueprint of Kafka Stream operations on one or more event streams. Essentially, the processor topology can be considered as a directed acyclic graph. In this graph, nodes are categorized into source, processor, and sink nodes, whereas the edges represent the flow of the stream events.
+
+The source at the top of the topology receives streaming data from Kafka, passes it down to the processor nodes where custom operations are performed, and flows out through the sink nodes to a new Kafka topic. 
+
+-------book
